@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Shohibul Qurban 1447 H - Masjid Al Muhtadin</title>
+
+    <meta property="og:title" content="Daftar Shohibul Qurban 1447 H - Masjid Al Muhtadin">
+    <meta property="og:description" content="Daftar Shohibul Qurban Idul Adha 1447 H Masjid Al Muhtadin">
+    <meta property="og:image" content="https://github.com/dany29326-prog/almuhtadiniduladha/blob/main/masjid_almuhtadin.webp?raw=true">
+    <meta property="og:url" content="https://almuhtadindemo.musab.my.id/">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(9, 48, 24, 0.3), rgba(0, 0, 0, 0.5)), 
+                              url('https://github.com/dany29326-prog/almuhtadiniduladha/blob/main/masjid_almuhtadin.webp?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Tombol Kembali */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #f1c40f;
+            color: #f1c40f;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            align-self: flex-start;
+        }
+
+        .back-btn:hover {
+            background: rgba(241, 196, 15, 0.2);
+            transform: translateX(-3px);
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: #f1c40f;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            margin-bottom: 5px;
+        }
+
+        .page-header .subtitle {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        /* Kelompok Sapi */
+        .kelompok-card {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .kelompok-header {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #f1c40f;
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(241, 196, 15, 0.2);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .shohibul-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .shohibul-item:last-child {
+            border-bottom: none;
+        }
+
+        .shohibul-item .number {
+            color: #f1c40f;
+            font-weight: 700;
+            min-width: 28px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .shohibul-item .name {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        /* Footer */
+        .footer-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: #f1c40f;
+            text-align: center;
+            margin-top: auto;
+            padding-top: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← Kembali</a>
+
+        <div class="page-header">
+            <h1>🐑 DAFTAR SHOHIBUL QURBAN</h1>
+            <div class="subtitle">Idul Adha 1447 H - Masjid Al Muhtadin</div>
+        </div>
+
+        <!-- KELOMPOK MUDHOHI SAPI & PANITIA -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">📋 KELOMPOK MUDHOHI SAPI</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">PANITIA IDUL ADHA 1447 H</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 1 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 1</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. JOKO SANTOSO - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. IBU DESY ROSPITA - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. H. NURDIN - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. JUNAIDI ALFAN - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. SAHLAN - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. SRI SUTANTO MELON - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">ALM. BP. AHMAD MARZUKI (MUSLIM) - GG. MELON</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 2 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 2</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. SURYONO - GG. FLAMBOYAN</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. EFFENDI - GG. TERATAI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. ANSORI - GG. DAHLIA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. SUGENG - GG. DAHLIA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. IBU SUWARTO - GG. DAHLIA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. IBU ASFIAH (MUHANI) - GG. DAHLIA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. IBU ANISA NUR ASTUTI KUSWANTO - GG. CEMPAKA</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 3 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 3</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. MARJONO - GG. MANGGA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. IBU SILMA AUFIA NAILA HUSNA - GG. MANGGA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. SYU'BACH HAKAM - GG. FLAMBOYAN 5B</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. AGUS SETYA BUDI - GG. FLAMBOYAN</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. SDR. M. F. ALFADLY - GG. DELIMA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. IBU SUISNI - GG. MELATI 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. DARMAWAN - GG. MELATI 2</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 4 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 4</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. USMAN MISMAN - GG. PCI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. RANGGA - GG. PCI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. SDRI. SHAFA MAURIZZKA SISWANTO - GG. PCI F1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. MUH. KALONO - GG. PCI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. NAIM ABU AMRA - GG. PCI F 27</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. MUH. KAMIL AL FAUZAN (UST. GHULAM) - GG. PUNTODEWO</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. MUH. ISMAIL AL FAUZAN (UST. GHULAM) - GG. PUNTODEWO</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 5 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 5</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. SLAMET UMAR - GG. MERAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. HERU SUBROTO - GG. MERAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. H. KHOIRUL MAROM - GG. MERAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. IBU WIWIK SRI HARYANTI - GG. MERAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. MA'RUF - GG. MERAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. JOKO ANANTO - GG. MERAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. IBU SUYATMI - GG. MERAK</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 6 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 6</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. TEGUH SUPRAYITNO - GG. STROBERI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. AHMAD SAIFUDIN - GG. SAWO</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. MBAH MITROWIYONO MARINDI - GG. SAWO</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. SUPRIYONO - GG. SAWO</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. SARIMAN - GG. STROBERI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. JUPRE POLONG - GG. STROBERI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. IBU SAKINA (IR. SISWANTO) - GG. NAKULA NO 3</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 7 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 7</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. JIMIN SISWANTO - GG. NANAS</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. TEGUH - GG. NANAS</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. SUROTO - GG. NANAS</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. AMIN - GG. NANAS</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. MUHAMMAD EFFENDI ARISTIANTO - GG. NANAS</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. AGUS WIYONO - GG. MELON</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. HARSONO - GG. NGRUKI</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 8 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 8</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. TEGUH M. SIDIK - GG. MANGGIS 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. KUSTRIHANDAYANTO - GG. MANGGIS 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. ARIEF PRASETYO ADI - GG. MANGGIS 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. LASTIKO - GG. PUNTODEWO</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. IBU HJ. SITI SYAMSIAH - GG. PINGUIN</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. M. IDRIS - GG. PINGUIN</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. YUDHY NOVIANTO - GG. PINGUIN</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 9 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 9</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. PAIDI - GG. SRI GUNTING 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. IMAM MA'SUM - GG. WIJAYA KUSUMA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. GIYONO - GG. WIJAYA KUSUMA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. SDRI. ZAHWA LATHIFA S P - GG. WIJAYA KUSUMA</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. IBU SRI NINGSIH - GG. SRI GUNTING 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. SDR. FHARIS KRISTIYONO - GG. SRI GUNTING 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. DJUNAIDI - GG. SRI GUNTING 2</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 10 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 10</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. TAUFIK SUTARYO - GG. PCI D11</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. IBU SRI HASTUTI - GG. PCI D11</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. SDRI. ELIANA HENDRA - GG. PCI C3</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. MUHAMMAD SARWANI - GG. PCI E5</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. SUNARTO - GG. PCI B2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. IBU MARYATI - GG. PCI B2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. FAUZAN ADZIMA - GG. PCI F7</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 11 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 11</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. H. TEGUH - GG. KASUARI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. EKO YULI - GG. KASWARI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. WANDOYO - GG. KASWARI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. GUNAWAN - GG. KASWARI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. SUMARLAN - GG. KASWARI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. ABDUL MU'IS - GG. DECU</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. SUTAR - GG. PARKIT</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 12 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 12</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. WARINO ABDURROHIM - GG. SALAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. PRIJONO - GG. SALAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. SUWARDI - GG. SALAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. IMAM RUSDI - GG. SALAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. SUYADI - GG. SALAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. SARWONO - GG. SALAK</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. SULIMIN - GG. SALAK</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 13 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 13</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. H. MULYONO - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. AGUS SARWANTO - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. SRI WAHONO - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. SAMTANA - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. MAKNO WIBOWO - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. IBU WIDYASTUTI BINTI KIMIN (BP BENDI) - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. MARYADI - GG. MANGGIS 2</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 14 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 14</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. IBU NANIK (Alm. Widodo Muchtar) - MACANAN, SOLO</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 15 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 15</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. KASIMAN - GG. PCI F23</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. IBU HARDIYATNI - GG. PCI D34</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. SDR. MUHAMMAD YAZID IRFAN BIN MUHAMAD MUFID SETIOWIBOWO - GG. PCI D16</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. PITOYO AMRIH - GG. PCI D34</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. IBU MORO RETININGTYAS - GG. PCI D24</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">ALM. ACHMAD SUTIYO RAHARJO - GG. PCI D34</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">ALMH. IBU SARINTEN BINTI H. UMAR MUSA / YUSUF SYAHRAN - GG. PCI B4</span>
+            </div>
+        </div>
+
+        <!-- KELOMPOK SAPI 16 -->
+        <div class="kelompok-card">
+            <div class="kelompok-header">🐂 KELOMPOK SAPI 16</div>
+            <div class="shohibul-item">
+                <span class="number">1.</span>
+                <span class="name">KEL. BP. TRI NURDIN - GG. ANGGUR</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">2.</span>
+                <span class="name">KEL. BP. BUDI PURWANTO - GG. MANGGIS 1</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">3.</span>
+                <span class="name">KEL. BP. AGUNG PW. - GG. SAWO</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">4.</span>
+                <span class="name">KEL. BP. HASAN AHMADI - GG. MANGGIS 2</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">5.</span>
+                <span class="name">KEL. BP. HARSONO - GG. NGRUKI</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">6.</span>
+                <span class="name">KEL. BP. SUKRON - GG. NANAS</span>
+            </div>
+            <div class="shohibul-item">
+                <span class="number">7.</span>
+                <span class="name">KEL. BP. H. MUSLIM - GG. MELON</span>
+            </div>
+        </div>
+
+        <p class="footer-text">Memakmurkan Masjid dan Jamaahnya</p>
+    </div>
+
+</body>
+</html>

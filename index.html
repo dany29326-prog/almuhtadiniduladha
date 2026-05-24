@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menuju Idul Adha - Masjid Al Muhtadin</title>
+
+    <meta property="og:title" content="Menuju Hari Raya Qurban - Masjid Al Muhtadin">
+    <meta property="og:description" content="Mari persiapkan diri dan berqurban bersama. Lihat hitung mundur menuju 10 Dzulhijjah 1447 H.">
+    <meta property="og:image" content="https://github.com/dany29326-prog/almuhtadiniduladha/blob/main/masjid_almuhtadin.webp?raw=true">
+    <meta property="og:url" content="https://almuhtadindemo.musab.my.id/">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Dasar Halaman */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            /* Latar belakang gambar dengan efek transparan terang */
+            background-image: linear-gradient(rgba(9, 48, 24, 0.2), rgba(0, 0, 0, 0.4)), 
+                              url('https://github.com/dany29326-prog/almuhtadiniduladha/blob/main/masjid_almuhtadin.webp?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px; 
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* --- GAYA UNTUK TOMBOL SUARA --- */
+        .audio-btn {
+            background-color: rgba(241, 196, 15, 0.2);
+            border: 2px solid #f1c40f;
+            color: #f1c40f;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin-bottom: 20px;
+            /* Efek blur dihapus dari sini */
+            transition: all 0.3s ease;
+        }
+
+        .audio-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Gaya Teks Header */
+        .header-text {
+            color: #ffffff;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+        }
+
+        /* Gaya Kotak Hitung Mundur */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .time-box {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #f1c40f;
+            border-radius: 12px;
+            padding: 15px 10px;
+            width: 75px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            /* Efek blur dihapus dari sini */
+        }
+
+        .time-box .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f1c40f;
+            display: block;
+        }
+
+        .time-box .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            display: block;
+            color: #ffffff;
+        }
+
+        /* Gaya Nama Masjid */
+        .masjid-name {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #f1c40f;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,1);
+        }
+
+        /* Gaya Kotak Menu */
+        .menu-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(241, 196, 15, 0.3);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-box:hover {
+            background: rgba(241, 196, 15, 0.15);
+            border-color: #f1c40f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(241, 196, 15, 0.2);
+        }
+
+        .menu-box .menu-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .menu-box .menu-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: #f1c40f;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .menu-box .menu-sub {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 5px;
+        }
+
+        .footer-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #f1c40f;
+            margin-top: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <audio id="takbirAudio" loop>
+                <source src="takbiran.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+
+            <button id="playAudioBtn" class="audio-btn">🔊 Nyalakan Suara</button>
+
+            <h4 class="header-text">MENUJU HARI RAYA QURBAN</h4>
+            
+            <div class="countdown" id="countdown">
+                Memuat hitungan mundur...
+            </div>
+        </div>
+        
+        <div>
+            <h1 class="masjid-name">MASJID<br>AL MUHTADIN</h1>
+            
+            <!-- Menu Box 1 -->
+            <div class="menu-box" onclick="alert('Menu Panitia Idul Adha 1447 H')">
+                <span class="menu-icon">📋</span>
+                <span class="menu-title">Panitia Idul Adha 1447 H</span>
+                <span class="menu-sub">Klik untuk melihat</span>
+            </div>
+
+            <!-- Menu Box 2 -->
+            <a href="shohibul-qurban.html" style="text-decoration: none; display: block;">
+                <div class="menu-box">
+                    <span class="menu-icon">🐑</span>
+                    <span class="menu-title">Daftar Shohibul Qurban 1447 H</span>
+                    <span class="menu-sub">Klik untuk melihat</span>
+                </div>
+            </a>
+
+            <!-- Menu Box 3 -->
+            <div class="menu-box" onclick="alert('Menu Laporan Keuangan Kegiatan Qurban 1447 H')">
+                <span class="menu-icon">💰</span>
+                <span class="menu-title">Laporan Keuangan Kegiatan Qurban 1447 H</span>
+                <span class="menu-sub">Klik untuk melihat</span>
+            </div>
+        </div>
+
+        <p class="footer-text">Memakmurkan Masjid dan Jamaahnya</p>
+    </div>
+
+    <script>
+        // PENGATURAN SUARA
+        const myAudio = document.getElementById("takbirAudio");
+        const playBtn = document.getElementById("playAudioBtn");
+
+        playBtn.addEventListener("click", function() {
+            if (myAudio.paused) {
+                myAudio.play();
+                playBtn.innerHTML = "🔇 Matikan Suara"; 
+                playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; 
+            } else {
+                myAudio.pause();
+                playBtn.innerHTML = "🔊 Nyalakan Suara"; 
+                playBtn.style.backgroundColor = "rgba(241, 196, 15, 0.2)"; 
+            }
+        });
+
+        // PENGATURAN HITUNG MUNDUR
+        const targetDate = new Date("May 27, 2026 00:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `
+                <div class="time-box">
+                    <span class="number">${days}</span>
+                    <span class="label">Hari</span>
+                </div>
+                <div class="time-box">
+                    <span class="number">${hours}</span>
+                    <span class="label">Jam</span>
+                </div>
+                <div class="time-box">
+                    <span class="number">${minutes}</span>
+                    <span class="label">Menit</span>
+                </div>
+                <div class="time-box">
+                    <span class="number">${seconds}</span>
+                    <span class="label">Detik</span>
+                </div>
+            `;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<h2 style='color:#f1c40f; background: rgba(0,0,0,0.6); padding: 10px; border-radius: 8px;'>Selamat Hari Raya Idul Adha!</h2>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
