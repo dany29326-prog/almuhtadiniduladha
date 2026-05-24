@@ -11,9 +11,7 @@
     <meta property="og:url" content="https://almuhtadindemo.musab.my.id/">
     <meta property="og:type" content="website">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -23,14 +21,14 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
                               url('masjid_muhtadin.webp');
             background-size: cover;
             background-position: center;
@@ -47,46 +45,41 @@
             min-height: 100vh;
         }
 
-        /* --- TOMBOL SUARA PREMIUM --- */
+        /* --- TOMBOL SUARA --- */
         .audio-btn {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.1));
+            background: rgba(255, 255, 255, 0.1);
             border: 1.5px solid #d4af37;
             color: #d4af37;
             padding: 10px 22px;
             border-radius: 50px;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 0.8rem;
-            letter-spacing: 0.5px;
             cursor: pointer;
             margin-bottom: 25px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
         }
 
         .audio-btn:hover {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.2));
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-            transform: translateY(-1px);
+            background: rgba(212, 175, 55, 0.2);
         }
 
         .audio-btn:active {
             transform: scale(0.95);
         }
 
-        /* --- HEADER TEKS --- */
+        /* --- HEADER --- */
         .header-text {
-            color: #f5f0e8;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
+            color: #ffffff;
+            font-size: 1rem;
+            letter-spacing: 2px;
             margin-bottom: 25px;
-            font-weight: 300;
-            text-transform: uppercase;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            font-weight: 600;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
 
-        /* --- COUNTDOWN PREMIUM --- */
+        /* --- COUNTDOWN --- */
         .countdown {
             display: flex;
             justify-content: center;
@@ -95,20 +88,13 @@
         }
 
         .time-box {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            border-radius: 16px;
-            padding: 18px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            border-radius: 14px;
+            padding: 16px 10px;
             width: 78px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .time-box:hover {
-            border-color: #d4af37;
-            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
-            transform: translateY(-2px);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .time-box .number {
@@ -116,61 +102,59 @@
             font-weight: 700;
             color: #d4af37;
             display: block;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cinzel', serif;
             line-height: 1;
         }
 
         .time-box .label {
-            font-size: 0.6rem;
+            font-size: 0.65rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             margin-top: 8px;
             display: block;
-            color: rgba(255,255,255,0.7);
-            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            font-weight: 600;
         }
 
-        /* --- NAMA MASJID PREMIUM --- */
+        /* --- NAMA MASJID --- */
         .masjid-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cinzel', serif;
             font-size: 2.8rem;
             color: #d4af37;
             line-height: 1.15;
             margin-bottom: 35px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
         }
 
-        /* --- KOTAK MENU PREMIUM --- */
+        /* --- KOTAK MENU --- */
         .menu-box {
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 22px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 20px;
             margin-bottom: 16px;
-            border: 1px solid rgba(212, 175, 55, 0.25);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             text-align: center;
             cursor: pointer;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
         }
 
         .menu-box:hover {
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(212, 175, 55, 0.15);
             border-color: #d4af37;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.15);
         }
 
         .menu-box .menu-icon {
             font-size: 2rem;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .menu-box .menu-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
             color: #d4af37;
             font-weight: 700;
             letter-spacing: 0.5px;
@@ -179,13 +163,11 @@
 
         /* --- FOOTER --- */
         .footer-text {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.1rem;
             color: #d4af37;
             margin-top: auto;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-            letter-spacing: 0.5px;
-            font-style: italic;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
     </style>
 </head>
@@ -243,11 +225,11 @@
             if (myAudio.paused) {
                 myAudio.play();
                 playBtn.innerHTML = "🔇 Matikan Suara"; 
-                playBtn.style.background = "linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.2))";
+                playBtn.style.background = "rgba(212, 175, 55, 0.25)";
             } else {
                 myAudio.pause();
                 playBtn.innerHTML = "🔊 Nyalakan Suara"; 
-                playBtn.style.background = "linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.1))";
+                playBtn.style.background = "rgba(255, 255, 255, 0.1)";
             }
         });
 
@@ -284,7 +266,7 @@
 
             if (distance < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<h2 style='color:#d4af37; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); padding: 15px; border-radius: 16px; border: 1px solid rgba(212,175,55,0.3); font-family: Playfair Display, serif;'>Selamat Hari Raya Idul Adha!</h2>";
+                document.getElementById("countdown").innerHTML = "<h2 style='color:#d4af37; background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); padding: 15px; border-radius: 14px; border: 1px solid rgba(212,175,55,0.3); font-family: Cinzel, serif;'>Selamat Hari Raya Idul Adha!</h2>";
             }
         }, 1000);
     </script>
