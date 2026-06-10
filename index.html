@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan Idul Adha 1447H — Masjid Al Muhtadin</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --hijau:#1B6B3A;--hijau-dk:#124A28;--hijau-md:#2D8C52;
+  --hijau-soft:#E8F5EE;--hijau-pale:#F0FAF4;
+  --emas:#D4A017;--emas-lt:#F0C842;--emas-soft:#FEF9E7;
+  --org:#E8670A;--org-soft:#FFF3EA;
+  --biru:#1565C0;--biru-soft:#E3F0FF;
+  --putih:#FFFFFF;--abu-lt:#F4F6F8;--abu:#6C757D;
+  --gelap:#1A1A2E;--teks:#2C3E50;
+  --radius:16px;--radius-sm:10px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;color:var(--teks);background:var(--putih);line-height:1.6;font-size:15px}
+
+/* Prevent sticky header overlap */
+section, .penutup, #galeri {
+  scroll-margin-top: 52px;
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(18, 74, 40, 0.9);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  height:52px;display:flex;align-items:center;
+  padding:0 16px;gap:8px;
+  box-shadow:0 2px 12px rgba(0,0,0,.2);
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none}
+.nav-brand{color:var(--emas-lt);font-weight:700;font-size:13px;white-space:nowrap;margin-right:8px}
+.nav-sep{color:rgba(255,255,255,.2);font-size:12px}
+.nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:12px;font-weight:500;white-space:nowrap;padding:6px 12px;border-radius:20px;transition:.2s}
+.nav a:hover,.nav a:focus{background:rgba(255,255,255,.12);color:var(--emas-lt)}
+.nav a.active{background:var(--emas);color:var(--hijau-dk);font-weight:700}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(160deg,var(--hijau-dk) 0%,var(--hijau) 60%,var(--hijau-md) 100%);
+  padding:48px 16px 56px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;opacity:.06;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23fff' stroke-width='.5'%3E%3Ccircle cx='30' cy='30' r='25'/%3E%3Ccircle cx='30' cy='30' r='15'/%3E%3Cline x1='5' y1='30' x2='55' y2='30'/%3E%3Cline x1='30' y1='5' x2='30' y2='55'/%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+.hero-inner{position:relative;z-index:1;max-width:520px;margin:0 auto}
+.bismillah{font-size:20px;color:var(--emas-lt);margin-bottom:10px;letter-spacing:.5px}
+.hero-badge{
+  display:inline-block;background:rgba(212,160,23,.18);
+  border:1px solid rgba(212,160,23,.5);color:var(--emas-lt);
+  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 16px;border-radius:20px;margin-bottom:16px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,9vw,52px);color:var(--putih);line-height:1.1;margin-bottom:6px;
+}
+.hero h1 span{color:var(--emas-lt)}
+.hero-sub{font-size:13.5px;color:rgba(255,255,255,.72);margin-bottom:24px;line-height:1.5}
+.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:0}
+.pill{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  color:var(--putih);padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;
+}
+.pill strong{color:var(--emas-lt)}
+
+/* ── STAT STRIP ── */
+.strip{background:var(--emas);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip-inner{display:flex;min-width:max-content;padding:0 4px}
+.s-item{
+  padding:14px 18px;text-align:center;
+  border-right:1px solid rgba(27,75,50,.15);min-width:100px;
+}
+.s-item:last-child{border-right:none}
+.s-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--hijau-dk);line-height:1}
+.s-lbl{font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--hijau-dk);opacity:.7;margin-top:3px}
+
+/* ── SECTIONS ── */
+.sec{padding:40px 16px}
+.sec-alt{background:var(--abu-lt)}
+.sec-green{background:var(--hijau-soft)}
+.sec-emas{background:var(--emas-soft)}
+.sec-org{background:var(--org-soft)}
+.wrap{max-width:560px;margin:0 auto}
+
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--hijau);margin-bottom:6px}
+.sec-ttl{font-family:'Playfair Display',serif;font-size:clamp(20px,6vw,28px);font-weight:700;color:var(--gelap);margin-bottom:6px;line-height:1.2}
+.sec-desc{font-size:13.5px;color:var(--abu);margin-bottom:24px}
+
+/* ── SAMBUTAN ── */
+.samb-who{
+  background:var(--hijau);border-radius:var(--radius);padding:24px;
+  display:flex;gap:16px;align-items:center;margin-bottom:16px;
+}
+.samb-av{
+  width:56px;height:56px;border-radius:50%;background:var(--emas);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:24px;font-weight:900;
+  color:var(--hijau-dk);flex-shrink:0;
+}
+.samb-name{font-size:15px;font-weight:700;color:var(--emas-lt)}
+.samb-role{font-size:11.5px;color:rgba(255,255,255,.6);margin-top:2px}
+.samb-loc{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.5}
+.samb-body{background:var(--putih);border-radius:var(--radius);padding:20px;box-shadow:0 3px 16px rgba(0,0,0,.07)}
+.samb-body blockquote{border-left:3px solid var(--emas);padding-left:12px;font-style:italic;color:var(--hijau-md);font-size:13.5px;margin-bottom:14px}
+.samb-body p{font-size:13.5px;color:var(--teks);line-height:1.8;margin-bottom:12px}
+.samb-body p:last-child{margin-bottom:0}
+
+/* ── STAT CARDS ── */
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.stat-card{
+  background:var(--putih);border-radius:var(--radius);padding:20px 14px;
+  text-align:center;box-shadow:0 3px 14px rgba(0,0,0,.07);
+}
+.stat-icon{font-size:28px;margin-bottom:8px}
+.stat-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;line-height:1;color:var(--hijau);margin-bottom:4px}
+.stat-num.emas{color:var(--emas)}
+.stat-num.org{color:var(--org)}
+.stat-num.biru{color:var(--biru)}
+.stat-lbl{font-size:10.5px;font-weight:600;color:var(--abu);text-transform:uppercase;letter-spacing:.8px}
+.stat-card.full{grid-column:1/-1}
+
+/* ── HEWAN ── */
+.hewan-card{
+  border-radius:var(--radius);padding:28px 20px;text-align:center;
+  color:var(--putih);margin-bottom:14px;
+}
+.hewan-card.sapi{background:linear-gradient(135deg,var(--hijau-dk),var(--hijau-md))}
+.hewan-card.kambing{background:linear-gradient(135deg,#7B4F00,#C4882A)}
+.hewan-em{font-size:48px;margin-bottom:12px}
+.hewan-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;line-height:1;color:var(--emas-lt)}
+.hewan-unit{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:2px}
+.hewan-det{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.2)}
+.hewan-det p{font-size:12.5px;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:6px}
+
+/* ── KEUANGAN ── */
+.keu-card{background:var(--putih);border-radius:var(--radius);overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.07);margin-bottom:14px}
+.keu-head{padding:13px 16px;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
+.keu-head.masuk{background:var(--hijau);color:var(--emas-lt)}
+.keu-head.keluar{background:#9B2226;color:#FECDCA}
+.keu-tbl{width:100%;border-collapse:collapse}
+.keu-tbl tr{border-bottom:1px solid var(--abu-lt);transition:background .2s}
+.keu-tbl tr:last-child{border-bottom:none}
+.keu-card:first-child .keu-tbl tr:hover{background:var(--hijau-pale)}
+.keu-card:last-child .keu-tbl tr:hover{background:#FFF6F6}
+.keu-tbl td{padding:11px 14px;font-size:13px}
+.keu-tbl td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+.keu-tbl tr.tot td{font-weight:700;font-size:13.5px;background:var(--hijau-soft)}
+.keu-tbl tr.tot.red td{background:#FFF0F0;color:#9B2226}
+.saldo{
+  background:var(--hijau-dk);border-radius:var(--radius-sm);padding:16px 18px;
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  margin-bottom:8px;
+}
+.saldo-lbl{font-size:12px;font-weight:600;color:rgba(255,255,255,.65)}
+.saldo-sub{font-size:10.5px;color:rgba(255,255,255,.35);margin-top:2px}
+.saldo-val{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#FCA5A5;text-align:right}
+.saldo-note{font-size:11.5px;color:var(--abu);text-align:center;font-style:italic;padding:4px 8px}
+
+/* ── DISTRIBUSI OVERVIEW ── */
+.dag-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}
+.dag-pill{background:var(--putih);border-radius:var(--radius-sm);padding:16px 12px;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.07)}
+.dag-pill .dn{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;line-height:1}
+.dag-pill .dn.g{color:var(--hijau)}
+.dag-pill .dn.o{color:var(--org)}
+.dag-pill .dn.e{color:var(--emas)}
+.dag-pill .dn.b{color:var(--biru)}
+.dag-pill .dl{font-size:10.5px;font-weight:600;color:var(--abu);margin-top:5px;text-transform:uppercase;letter-spacing:.7px}
+.dag-pill .ds{font-size:10px;color:#bbb;margin-top:2px}
+
+.shohibul-box{
+  background:var(--hijau-soft);border-radius:var(--radius-sm);
+  padding:14px 16px;margin-bottom:20px;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.shohibul-box .ico{font-size:20px;flex-shrink:0;margin-top:2px}
+.shohibul-box p{font-size:13px;color:var(--teks);line-height:1.7}
+
+/* Bar chart */
+.chart-box{background:var(--putih);border-radius:var(--radius);padding:18px;box-shadow:0 3px 14px rgba(0,0,0,.07);margin-bottom:14px}
+.chart-box h4{font-size:12.5px;font-weight:700;color:var(--gelap);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--hijau-soft)}
+.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.bar-lbl{font-size:11px;color:var(--teks);width:88px;flex-shrink:0;line-height:1.3}
+.bar-trk{flex:1;background:var(--abu-lt);border-radius:5px;height:20px;overflow:hidden}
+.bar-fl{
+  height:100%;border-radius:5px;display:flex;align-items:center;padding-left:7px;min-width:28px;
+  width:0%;transition:width 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.bar-fl span{font-size:10.5px;font-weight:700;color:var(--putih);white-space:nowrap}
+.bar-fl.g{background:linear-gradient(90deg,var(--hijau-md),var(--hijau))}
+.bar-fl.o{background:linear-gradient(90deg,#F08030,var(--org))}
+.bar-fl.b{background:linear-gradient(90deg,#3A9AD9,var(--biru))}
+.bar-fl.e{background:linear-gradient(90deg,var(--emas-lt),var(--emas))}
+.bar-fl.a{background:linear-gradient(90deg,#9E9E9E,#666)}
+.chart-total{margin-top:10px;padding-top:10px;border-top:2px solid var(--abu-lt);display:flex;justify-content:space-between;align-items:center}
+.chart-total span:first-child{font-size:11.5px;color:var(--abu)}
+.chart-total span:last-child{font-size:15px;font-weight:700;color:var(--hijau)}
+
+/* Grand total */
+.grand{
+  background:linear-gradient(90deg,var(--hijau-dk),var(--hijau-md));
+  border-radius:var(--radius);padding:18px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  flex-wrap:wrap;margin-top:4px;
+}
+.grand-lbl{font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.grand-sub{font-size:10.5px;color:rgba(255,255,255,.35);margin-top:2px}
+.grand-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--emas-lt)}
+
+/* ── DETAIL TABLE ── */
+.dist-card{background:var(--putih);border-radius:var(--radius);overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.07);margin-bottom:14px}
+.dist-head{padding:13px 16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.dist-head.w{background:var(--biru);color:var(--putih)}
+.dist-head.l{background:var(--org);color:var(--putih)}
+.dist-tbl{width:100%;border-collapse:collapse}
+.dist-tbl tr{border-bottom:1px solid var(--abu-lt);transition:background .15s}
+.dist-tbl tr:hover{background:var(--hijau-pale)}
+.dist-tbl td{padding:8px 14px;font-size:12.5px}
+.dist-tbl td:last-child{text-align:right;font-weight:700;color:var(--hijau);white-space:nowrap}
+.dist-tbl tr.tot td{background:var(--hijau-soft);font-weight:700;font-size:13px;color:var(--hijau-dk)}
+
+/* ── INFO CARDS ── */
+.info-card{
+  background:var(--putih);border-radius:var(--radius);padding:18px;
+  box-shadow:0 3px 14px rgba(0,0,0,.07);display:flex;gap:14px;
+  align-items:flex-start;margin-bottom:12px;
+}
+.info-ico{
+  width:44px;height:44px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;
+}
+.info-ico.g{background:var(--hijau-soft)}
+.info-ico.o{background:var(--org-soft)}
+.info-ico.e{background:var(--emas-soft)}
+.info-card h4{font-size:13px;font-weight:700;color:var(--gelap);margin-bottom:4px}
+.info-card p{font-size:12px;color:var(--abu);line-height:1.7}
+
+/* ── KELOMPOK GRID ── */
+.kel-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.kel-card{
+  background:var(--putih);border-radius:var(--radius-sm);padding:14px;
+  box-shadow:0 2px 10px rgba(0,0,0,.07);border-top:3px solid var(--hijau-md);
+  transition:transform .2s, box-shadow .2s;
+}
+.kel-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.kel-badge{
+  display:inline-block;background:var(--hijau);color:var(--emas-lt);
+  font-size:8.5px;font-weight:700;letter-spacing:1.2px;
+  padding:2px 7px;border-radius:4px;margin-bottom:7px;
+}
+.kel-ketua{font-size:13px;font-weight:700;color:var(--hijau);line-height:1.3;margin-bottom:2px;transition:color .2s}
+.kel-adr{font-size:10.5px;color:var(--abu);margin-bottom:7px}
+.kel-list{list-style:none;border-top:1px solid var(--abu-lt);padding-top:6px}
+.kel-list li{font-size:11px;color:#4B5563;padding:3px 0;display:flex;gap:4px;line-height:1.4;transition:all .2s}
+.kel-list li::before{content:'•';color:var(--emas);flex-shrink:0}
+
+/* ── SEARCH BAR ── */
+.search-container{
+  margin-bottom:24px;
+}
+.search-input-wrapper{
+  position:relative;display:flex;align-items:center;
+}
+.search-icon{
+  position:absolute;left:16px;color:var(--abu);font-size:16px;pointer-events:none;
+}
+.search-input{
+  width:100%;padding:14px 44px 14px 44px;
+  border-radius:var(--radius-sm);
+  border:2px solid var(--abu-lt);
+  font-size:14.5px;font-family:'Inter',sans-serif;
+  transition:all .2s ease;
+  background:var(--putih);outline:none;box-shadow:inset 0 1px 3px rgba(0,0,0,.03);
+}
+.search-input:focus{
+  border-color:var(--hijau);
+  box-shadow:0 0 0 3px rgba(27,107,58,0.1);
+}
+.search-clear{
+  position:absolute;right:16px;background:rgba(0,0,0,0.05);
+  border:none;font-size:16px;color:var(--abu);cursor:pointer;
+  width:22px;height:22px;border-radius:50%;
+  display:none;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.search-clear:hover{
+  background:rgba(0,0,0,0.1);color:var(--gelap);
+}
+.search-count{
+  font-size:12px;color:var(--hijau-md);margin-top:8px;font-weight:600;
+  display:none;
+}
+
+/* ── GALERI ── */
+.galeri-card{
+  background:var(--putih);border-radius:var(--radius);padding:32px 24px;
+  text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06);
+  border:1px solid rgba(27,107,58,.08);
+}
+.galeri-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--emas);color:var(--hijau-dk);
+  text-decoration:none;padding:14px 28px;
+  border-radius:50px;font-weight:700;font-size:14px;
+  box-shadow:0 4px 14px rgba(212,160,23,.3);
+  transition:all .2s ease;
+}
+.galeri-btn:hover, .galeri-btn:focus{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(212,160,23,.45);
+  background:var(--emas-lt);
+}
+
+/* ── PENUTUP ── */
+.penutup{
+  background:linear-gradient(160deg,var(--hijau-dk) 0%,var(--hijau) 100%);
+  padding:52px 16px;text-align:center;
+}
+.penutup-inner{max-width:480px;margin:0 auto}
+.p-ayat{font-family:'Playfair Display',serif;font-size:16px;color:var(--emas-lt);margin-bottom:6px;line-height:1.8}
+.p-ref{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:20px}
+.p-div{width:48px;height:2px;background:var(--emas);margin:0 auto 20px;border-radius:2px}
+.penutup p{font-size:13.5px;color:rgba(255,255,255,.8);line-height:1.9;margin-bottom:18px}
+.p-ttd{background:rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:16px 20px;display:inline-block;text-align:left}
+.p-ttd .jbt{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--emas)}
+.p-ttd .nm{font-family:'Playfair Display',serif;font-size:18px;color:var(--putih);font-weight:700;margin-top:3px}
+.p-ttd .org{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px}
+
+/* ── FOOTER ── */
+.footer{background:#0D1F14;color:rgba(255,255,255,.35);text-align:center;padding:16px;font-size:11.5px}
+.footer strong{color:rgba(255,255,255,.6)}
+
+/* ── PRINT FAB ── */
+.fab{
+  position:fixed;bottom:20px;right:16px;z-index:999;
+  background:var(--emas);color:var(--hijau-dk);border:none;
+  border-radius:50px;padding:11px 18px;font-size:12.5px;font-weight:700;
+  cursor:pointer;box-shadow:0 4px 18px rgba(212,160,23,.4);
+  display:flex;align-items:center;gap:6px;
+}
+@media print{.fab,.nav{display:none}}
+
+/* ── ANIM ── */
+.anim{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.anim.show{opacity:1;transform:none}
+
+/* ── DESKTOP tweaks ── */
+@media(min-width:480px){
+  .kel-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:600px){
+  .sec{padding:56px 24px}
+  .stat-grid{grid-template-columns:repeat(3,1fr)}
+  .dag-pills{grid-template-columns:repeat(4,1fr)}
+  .hewan-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .hewan-row .hewan-card{margin-bottom:0}
+  .keu-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .keu-row .keu-card{margin-bottom:0}
+}
+@media(min-width:768px){
+  .kel-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:960px){
+  .wrap{max-width:860px}
+  .kel-grid{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-brand">🕌 Al Muhtadin 1447H</span>
+  <span class="nav-sep">|</span>
+  <a href="#sambutan">Sambutan</a>
+  <a href="#hewan">Hewan</a>
+  <a href="#keuangan">Keuangan</a>
+  <a href="#daging">Distribusi</a>
+  <a href="#shohibul">Shohibul</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#penutup">Penutup</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+    <div class="hero-badge">Laporan Resmi Kegiatan Qurban</div>
+    <h1>Idul Adha <span>1447 H</span></h1>
+    <p class="hero-sub">Masjid Al Muhtadin<br>Waringinrejo, Cemani, Grogol, Sukoharjo</p>
+    <div class="hero-pills">
+      <div class="pill">📅 <strong>Rabu, 27 Mei 2026</strong></div>
+      <div class="pill">☪️ <strong>10 Dzulhijjah 1447H</strong></div>
+      <div class="pill">👤 Ketua: <strong>Bp. Muhammad Abdullah</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="s-item"><div class="s-num" data-to="16">0</div><div class="s-lbl">Kelompok Sapi</div></div>
+    <div class="s-item"><div class="s-num" data-to="112">0</div><div class="s-lbl">Shohibul Qurban</div></div>
+    <div class="s-item"><div class="s-num" data-to="24">0</div><div class="s-lbl">Ekor Kambing</div></div>
+    <div class="s-item"><div class="s-num" data-to="1843">0</div><div class="s-lbl">Bungkus Daging</div></div>
+    <div class="s-item"><div class="s-num">386 Jt</div><div class="s-lbl">Total Pemasukan</div></div>
+  </div>
+</div>
+
+<!-- SAMBUTAN -->
+<section class="sec" id="sambutan">
+  <div class="wrap">
+    <div class="eyebrow anim">Kata Pengantar</div>
+    <h2 class="sec-ttl anim">Sambutan Ketua Panitia</h2>
+    <div class="samb-who anim">
+      <div class="samb-av">M</div>
+      <div>
+        <div class="samb-name">Muhammad Abdullah</div>
+        <div class="samb-role">Ketua Panitia Idul Adha 1447H</div>
+        <div class="samb-loc">Masjid Al Muhtadin<br>Waringinrejo, Cemani, Grogol, Sukoharjo</div>
+      </div>
+    </div>
+    <div class="samb-body anim">
+      <blockquote>Assalamu'alaikum Warahmatullahi Wabarakatuh</blockquote>
+      <p>Alhamdulillah, segala puji bagi Allah SWT yang telah memberikan kemudahan dan keberkahan sehingga pelaksanaan ibadah qurban Idul Adha 1447H di <strong>Masjid Al Muhtadin</strong>, Waringinrejo, Cemani, Grogol, Sukoharjo dapat berjalan dengan lancar.</p>
+      <p>Kami dengan penuh syukur menyampaikan laporan pertanggungjawaban kegiatan ini. Sebanyak <strong>16 ekor sapi</strong> dan <strong>24 ekor kambing</strong> berhasil disembelih, menghasilkan total <strong>2.006 kg daging</strong> yang disalurkan kepada <strong>1.843 bungkus</strong> penerima manfaat. Bahkan 1 ekor sapi turut disalurkan ke wilayah <strong>Paranggubito, Wonogiri</strong> melalui kegiatan baksos Tebar Hewan Qurban.</p>
+      <p>Jazakumullahu khairan katsiran kepada seluruh shohibul qurban, panitia, dan warga yang telah berpartisipasi. <em>Semoga Allah menerima ibadah qurban kita semua. Aamiin.</em></p>
+      <p><em>Wassalamu'alaikum Warahmatullahi Wabarakatuh.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- STATISTIK -->
+<section class="sec sec-green">
+  <div class="wrap">
+    <div class="eyebrow anim">Ringkasan</div>
+    <h2 class="sec-ttl anim">Data Utama Qurban 1447H</h2>
+    <div class="stat-grid anim">
+      <div class="stat-card"><div class="stat-icon">🐄</div><div class="stat-num">16</div><div class="stat-lbl">Ekor Sapi</div></div>
+      <div class="stat-card"><div class="stat-icon">🐐</div><div class="stat-num emas">24</div><div class="stat-lbl">Ekor Kambing</div></div>
+      <div class="stat-card"><div class="stat-icon">👥</div><div class="stat-num">112</div><div class="stat-lbl">Shohibul Qurban</div></div>
+      <div class="stat-card"><div class="stat-icon">⚖️</div><div class="stat-num org">2.006</div><div class="stat-lbl">kg Daging Total</div></div>
+      <div class="stat-card full"><div class="stat-icon">📦</div><div class="stat-num biru">1.843</div><div class="stat-lbl">Bungkus Didistribusikan</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HEWAN QURBAN -->
+<section class="sec sec-alt" id="hewan">
+  <div class="wrap">
+    <div class="eyebrow anim">Hewan Qurban</div>
+    <h2 class="sec-ttl anim">Sapi & Kambing 1447H</h2>
+    <div class="hewan-row anim">
+      <div class="hewan-card sapi">
+        <div class="hewan-em">🐄</div>
+        <div class="hewan-num">16</div>
+        <div class="hewan-unit">Ekor Sapi</div>
+        <div class="hewan-det">
+          <p>✅ 15 ekor disembelih <strong>Rabu, 27 Mei 2026</strong> di Masjid Al Muhtadin</p>
+          <p>🤝 1 ekor disembelih <strong>Kamis, 28 Mei 2026</strong> — Baksos Tebar Qurban di <em>Paranggubito, Wonogiri</em></p>
+          <p>📊 Rata-rata per sapi: <strong>±133,7 kg</strong> daging</p>
+          <p>👥 16 kelompok • 112 shohibul qurban</p>
+        </div>
+      </div>
+      <div class="hewan-card kambing">
+        <div class="hewan-em">🐐</div>
+        <div class="hewan-num">24</div>
+        <div class="hewan-unit">Ekor Kambing</div>
+        <div class="hewan-det">
+          <p>✅ Disembelih <strong>Rabu, 27 Mei 2026</strong></p>
+          <p>📦 Menghasilkan <strong>229 bungkus @ 5 ons</strong></p>
+          <p>🏘️ Dibagikan kepada warga RT sekitar masjid</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEUANGAN -->
+<section class="sec" id="keuangan">
+  <div class="wrap">
+    <div class="eyebrow anim">Laporan Keuangan</div>
+    <h2 class="sec-ttl anim">Transparansi Pemasukan & Pengeluaran</h2>
+    <div class="keu-row anim">
+      <div class="keu-card">
+        <div class="keu-head masuk">✦ Pemasukan</div>
+        <table class="keu-tbl">
+          <tr><td>Iuran sapi Rp 3.600.000 × 5</td><td>Rp 18.000.000</td></tr>
+          <tr><td>Iuran sapi Rp 3.500.000 × 100</td><td>Rp 350.000.000</td></tr>
+          <tr><td>Iuran sapi Rp 2.500.000 × 7</td><td>Rp 17.500.000</td></tr>
+          <tr><td>Iuran transport Mbah Marzuki</td><td>Rp 300.000</td></tr>
+          <tr><td>Shodaqoh (Hamba ALLOH)</td><td>Rp 403.800</td></tr>
+          <tr class="tot"><td><strong>Total Pemasukan</strong></td><td><strong style="color:var(--hijau)">Rp 386.203.800</strong></td></tr>
+        </table>
+      </div>
+      <div class="keu-card">
+        <div class="keu-head keluar">✦ Pengeluaran</div>
+        <table class="keu-tbl">
+          <tr><td>Pembelian sapi</td><td>Rp 368.950.000</td></tr>
+          <tr><td>Dapur</td><td>Rp 6.000.000</td></tr>
+          <tr><td>Sarpras (Plastik, bambu & Kajang)</td><td>Rp 2.945.000</td></tr>
+          <tr><td>Transport sapi</td><td>Rp 3.246.000</td></tr>
+          <tr><td>Kesekretariatan</td><td>Rp 493.800</td></tr>
+          <tr><td>Kebersihan</td><td>Rp 850.000</td></tr>
+          <tr><td>Baksos</td><td>Rp 500.000</td></tr>
+          <tr><td>Snack Rapat</td><td>Rp 1.100.000</td></tr>
+          <tr><td>Souvenir</td><td>Rp 2.240.000</td></tr>
+          <tr class="tot red"><td><strong>Total Pengeluaran</strong></td><td><strong>Rp 386.324.800</strong></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="saldo anim">
+      <div><div class="saldo-lbl">Sisa Saldo</div><div class="saldo-sub">Pemasukan − Pengeluaran</div></div>
+      <div class="saldo-val">(Rp 121.000)</div>
+    </div>
+    <p class="saldo-note anim">* Kekurangan Rp 121.000 telah diselesaikan secara internal oleh panitia. Alhamdulillah.</p>
+  </div>
+</section>
+
+<!-- DISTRIBUSI DAGING -->
+<section class="sec sec-alt" id="daging">
+  <div class="wrap">
+    <div class="eyebrow anim">Distribusi Daging Qurban</div>
+    <h2 class="sec-ttl anim">Perolehan & Penyaluran</h2>
+    <p class="sec-desc anim">Total 2.006 kg daging disalurkan kepada 1.843 bungkus penerima manfaat</p>
+
+    <div class="dag-pills anim">
+      <div class="dag-pill"><div class="dn g">2.006</div><div class="dl">kg Total</div><div class="ds">Asumsi perolehan</div></div>
+      <div class="dag-pill"><div class="dn o">1.586</div><div class="dl">Bungkus Sapi</div><div class="ds">@ 1 kg / bungkus</div></div>
+      <div class="dag-pill"><div class="dn e">229</div><div class="dl">Bungkus Kambing</div><div class="ds">@ 5 ons / bungkus</div></div>
+      <div class="dag-pill"><div class="dn b">1.843</div><div class="dl">Total Bungkus</div><div class="ds">Seluruh distribusi</div></div>
+    </div>
+
+    <div class="shohibul-box anim">
+      <div class="ico">🎁</div>
+      <p><strong>Bagian Shohibul Qurban:</strong> 4 kg × 7 orang × 15 kelompok = 420 kg — sudah termasuk dalam total 2.006 kg</p>
+    </div>
+
+    <!-- Chart Warga -->
+    <div class="chart-box anim">
+      <h4>📍 Distribusi ke Warga (671 bungkus)</h4>
+      <div class="bar-row"><div class="bar-lbl">RT 03 RW 21</div><div class="bar-trk"><div class="bar-fl g" data-percent="88%"><span>88</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 04 RW 21</div><div class="bar-trk"><div class="bar-fl g" data-percent="75%"><span>75</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 06 RW 22</div><div class="bar-trk"><div class="bar-fl g" data-percent="88%"><span>88</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 06 RW 17</div><div class="bar-trk"><div class="bar-fl b" data-percent="100%"><span>100</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Haji Teguh</div><div class="bar-trk"><div class="bar-fl b" data-percent="100%"><span>100</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 09 RW 17</div><div class="bar-trk"><div class="bar-fl e" data-percent="63%"><span>63</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 07 RW 21</div><div class="bar-trk"><div class="bar-fl e" data-percent="45%"><span>45</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 07 RW 17</div><div class="bar-trk"><div class="bar-fl a" data-percent="39%"><span>39</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 08 RW 17</div><div class="bar-trk"><div class="bar-fl a" data-percent="39%"><span>39</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">RT 06 RW 21</div><div class="bar-trk"><div class="bar-fl a" data-percent="40%"><span>40</span></div></div></div>
+      <div class="chart-total"><span>Sub-total warga</span><span>671 bungkus</span></div>
+    </div>
+
+    <!-- Chart Lainnya -->
+    <div class="chart-box anim">
+      <h4>📦 Distribusi Lainnya (1.172 bungkus)</h4>
+      <div class="bar-row"><div class="bar-lbl">Tambahan Shohibul</div><div class="bar-trk"><div class="bar-fl o" data-percent="100%"><span>560</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Relawan</div><div class="bar-trk"><div class="bar-fl o" data-percent="69%"><span>388</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Jumat Berkah</div><div class="bar-trk"><div class="bar-fl e" data-percent="8.8%"><span>49</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Dlu'afa Hadir</div><div class="bar-trk"><div class="bar-fl e" data-percent="5.4%"><span>30</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Imam/Khotib/Muazin</div><div class="bar-trk"><div class="bar-fl b" data-percent="3.9%"><span>22</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Rel. Kebersihan</div><div class="bar-trk"><div class="bar-fl b" data-percent="3.9%"><span>22</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Proposal</div><div class="bar-trk"><div class="bar-fl a" data-percent="5.9%"><span>33</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Baksos (dimasak)</div><div class="bar-trk"><div class="bar-fl a" data-percent="2.3%"><span>13</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Jayengan</div><div class="bar-trk"><div class="bar-fl a" data-percent="1.1%"><span>6</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Tukang Kajang</div><div class="bar-trk"><div class="bar-fl a" data-percent="1.1%"><span>6</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Tim Pencari Sapi</div><div class="bar-trk"><div class="bar-fl a" data-percent="1.6%"><span>9</span></div></div></div>
+      <div class="chart-total" style="color:var(--org)"><span style="color:var(--abu)">Sub-total lainnya</span><span>1.172 bungkus</span></div>
+    </div>
+
+    <div class="grand anim">
+      <div><div class="grand-lbl">Grand Total Distribusi</div><div class="grand-sub">671 warga + 1.172 lainnya</div></div>
+      <div class="grand-val">1.843 bungkus</div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL TABLE -->
+<section class="sec sec-emas">
+  <div class="wrap">
+    <div class="eyebrow anim">Rincian Distribusi</div>
+    <h2 class="sec-ttl anim">Tabel Lengkap Penyaluran Daging</h2>
+    <div class="dist-card anim">
+      <div class="dist-head w">📍 Distribusi ke Warga</div>
+      <table class="dist-tbl">
+        <tr><td>RT 03 RW 21</td><td>88 bungkus</td></tr>
+        <tr><td>RT 04 RW 21</td><td>75 bungkus</td></tr>
+        <tr><td>RT 06 RW 21</td><td>40 bungkus</td></tr>
+        <tr><td>RT 07 RW 21</td><td>45 bungkus</td></tr>
+        <tr><td>RT 06 RW 17</td><td>100 bungkus</td></tr>
+        <tr><td>RT 07 RW 17</td><td>39 bungkus</td></tr>
+        <tr><td>RT 08 RW 17</td><td>39 bungkus</td></tr>
+        <tr><td>RT 09 RW 17</td><td>63 bungkus</td></tr>
+        <tr><td>RT 06 RW 22</td><td>88 bungkus</td></tr>
+        <tr><td>Haji Teguh</td><td>100 bungkus</td></tr>
+        <tr class="tot"><td><strong>Total Warga</strong></td><td><strong>671 bungkus</strong></td></tr>
+      </table>
+    </div>
+    <div class="dist-card anim">
+      <div class="dist-head l">📦 Distribusi Lainnya</div>
+      <table class="dist-tbl">
+        <tr><td>Tambahan untuk Shohibul Qurban</td><td>560 bungkus</td></tr>
+        <tr><td>Relawan</td><td>388 bungkus</td></tr>
+        <tr><td>Disimpan — Jumat Berkah</td><td>49 bungkus</td></tr>
+        <tr><td>Dlu'afa yang hadir ke masjid</td><td>30 bungkus</td></tr>
+        <tr><td>Imam / Khotib / Muazin</td><td>22 bungkus</td></tr>
+        <tr><td>Relawan Kebersihan Masjid</td><td>22 bungkus</td></tr>
+        <tr><td>Proposal</td><td>33 bungkus</td></tr>
+        <tr><td>Dimasak untuk bekal baksos</td><td>13 bungkus</td></tr>
+        <tr><td>Jayengan</td><td>6 bungkus</td></tr>
+        <tr><td>Tukang Kajang</td><td>6 bungkus</td></tr>
+        <tr><td>Tim Pencari Sapi</td><td>9 bungkus</td></tr>
+        <tr class="tot"><td><strong>Total Lainnya</strong></td><td><strong>1.172 bungkus</strong></td></tr>
+      </table>
+    </div>
+    <!-- Grand Total Box -->
+    <div style="background:var(--hijau);border-radius:var(--radius-sm);padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px;" class="anim">
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55)">Grand Total</div>
+        <div style="font-size:10.5px;color:rgba(255,255,255,.35);margin-top:2px">671 + 1.172 bungkus</div>
+      </div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--emas-lt)">1.843 bungkus</div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO TAMBAHAN -->
+<section class="sec sec-green">
+  <div class="wrap">
+    <div class="eyebrow anim">Informasi Tambahan</div>
+    <h2 class="sec-ttl anim">Catatan Penting</h2>
+    <div class="info-card anim">
+      <div class="info-ico g">📊</div>
+      <div><h4>Rata-rata Hasil per Sapi</h4><p>Total daging diasumsikan <strong>2.006 kg</strong>. Dari 15 ekor sapi yang disembelih di masjid, rata-rata menghasilkan <strong>133,7 kg</strong> per ekor.</p></div>
+    </div>
+    <div class="info-card anim">
+      <div class="info-ico o">🤝</div>
+      <div><h4>Baksos Tebar Hewan Qurban</h4><p>1 ekor sapi disembelih <strong>Kamis, 28 Mei 2026</strong> dan disalurkan ke wilayah <strong>Paranggubito, Wonogiri</strong> — bentuk kepedulian sosial lintas wilayah.</p></div>
+    </div>
+    <div class="info-card anim">
+      <div class="info-ico e">🎁</div>
+      <div><h4>Bagian Shohibul Qurban</h4><p>Setiap anggota mendapat <strong>4 kg</strong>. Total: 4 kg × 7 orang × 15 kelompok = <strong>420 kg</strong>. Tambahan shohibul: <strong>560 bungkus</strong>.</p></div>
+    </div>
+    <div class="info-card anim">
+      <div class="info-ico g">🕌</div>
+      <div><h4>Jumat Berkah</h4><p><strong>49 bungkus</strong> disimpan untuk program <em>Jumat Berkah</em> — berbagi rutin masjid yang terus berlangsung pasca Idul Adha.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOHIBUL QURBAN -->
+<section class="sec" id="shohibul">
+  <div class="wrap">
+    <div class="eyebrow anim">Shohibul Qurban</div>
+    <h2 class="sec-ttl anim">16 Kelompok Sapi</h2>
+    <p class="sec-desc anim">Semoga Allah SWT menerima ibadah qurban seluruh peserta. Aamiin Ya Rabbal 'Aalamiin.</p>
+    
+    <!-- Search Bar -->
+    <div class="search-container anim">
+      <div class="search-input-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="shohibul-search" class="search-input" placeholder="Cari nama shohibul, ketua, kelompok, atau gang...">
+        <button id="search-clear" class="search-clear" title="Bersihkan">&times;</button>
+      </div>
+      <div id="search-count" class="search-count"></div>
+    </div>
+
+    <div class="kel-grid anim">
+
+      <div class="kel-card"><div class="kel-badge">SAPI 1</div><div class="kel-ketua">Kel. Bp. Joko Santoso</div><div class="kel-adr">Gg. Melon</div><ul class="kel-list"><li>Ibu Desy Rospita</li><li>Bp. H. Nurdin</li><li>Bp. Junaidi Alfan</li><li>Bp. Sahlan</li><li>Bp. Sri Sutanto</li><li>Alm. Bp. Ahmad Marzuki</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 2</div><div class="kel-ketua">Kel. Bp. Suryono</div><div class="kel-adr">Gg. Flamboyan</div><ul class="kel-list"><li>Bp. Effendi</li><li>Bp. Ansori</li><li>Bp. Sugeng</li><li>Ibu Suwarto</li><li>Ibu Asfiah (Muhani)</li><li>Ibu Anisa Nur Astuti</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 3</div><div class="kel-ketua">Kel. Bp. Marjono</div><div class="kel-adr">Gg. Mangga</div><ul class="kel-list"><li>Ibu Silma Aufia N.H.</li><li>Bp. Syu'bach Hakam</li><li>Bp. Agus Setya Budi</li><li>Sdr. M. F. Alfadly</li><li>Ibu Suisni</li><li>Bp. Darmawan</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 4</div><div class="kel-ketua">Kel. Bp. Usman Misman</div><div class="kel-adr">Gg. PCI</div><ul class="kel-list"><li>Bp. Rangga</li><li>Sdri. Shafa Maurizzka</li><li>Bp. Muh. Kalono</li><li>Bp. Naim Abu Amra</li><li>Bp. Muh. Kamil Al Fauzan</li><li>Bp. Muh. Ismail Al Fauzan</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 5</div><div class="kel-ketua">Kel. Bp. Slamet Umar</div><div class="kel-adr">Gg. Merak</div><ul class="kel-list"><li>Bp. Heru Subroto</li><li>Bp. H. Khoirul Marom</li><li>Ibu Wiwik Sri Haryanti</li><li>Bp. Ma'ruf</li><li>Bp. Joko Ananto</li><li>Ibu Suyatmi</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 6</div><div class="kel-ketua">Kel. Bp. Teguh Suprayitno</div><div class="kel-adr">Gg. Stroberi</div><ul class="kel-list"><li>Bp. Ahmad Saifudin</li><li>Mbah Mitrowiyono</li><li>Bp. Supriyono</li><li>Bp. Sariman</li><li>Bp. Jupre Polong</li><li>Ibu Sakina (Ir. Siswanto)</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 7</div><div class="kel-ketua">Kel. Bp. Jimin Siswanto</div><div class="kel-adr">Gg. Nanas</div><ul class="kel-list"><li>Bp. Teguh</li><li>Bp. Suroto</li><li>Bp. Amin</li><li>Bp. M. Effendi Aristianto</li><li>Bp. Agus Wiyono</li><li>Bp. Harsono — Ngruki</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 8</div><div class="kel-ketua">Kel. Bp. Teguh M. Sidik</div><div class="kel-adr">Gg. Manggis 1</div><ul class="kel-list"><li>Bp. Kustrihandayanto</li><li>Bp. Arief Prasetyo Adi</li><li>Bp. Lastiko — Puntodewo</li><li>Ibu Hj. Siti Syamsiah</li><li>Bp. M. Idris</li><li>Bp. Yudhy Novianto</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 9</div><div class="kel-ketua">Kel. Bp. Paidi</div><div class="kel-adr">Gg. Sri Gunting 1</div><ul class="kel-list"><li>Bp. Imam Ma'sum</li><li>Bp. Giyono</li><li>Sdri. Zahwa Lathifa S P</li><li>Ibu Sri Ningsih</li><li>Sdr. Fharis Kristiyono</li><li>Bp. Djunaidi</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 10</div><div class="kel-ketua">Kel. Bp. Taufik Sutaryo</div><div class="kel-adr">Gg. PCI D11</div><ul class="kel-list"><li>Ibu Sri Hastuti</li><li>Sdri. Eliana Hendra</li><li>Bp. Muhammad Sarwani</li><li>Bp. Sunarto</li><li>Ibu Maryati</li><li>Bp. Fauzan Adzima</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 11</div><div class="kel-ketua">Kel. Bp. H. Teguh</div><div class="kel-adr">Gg. Kasuari</div><ul class="kel-list"><li>Bp. Eko Yuli</li><li>Bp. Wandoyo</li><li>Bp. Gunawan</li><li>Bp. Sumarlan</li><li>Bp. Abdul Mu'is</li><li>Bp. Sutar — Parkit</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 12</div><div class="kel-ketua">Kel. Bp. Warino Abdurrohim</div><div class="kel-adr">Gg. Salak</div><ul class="kel-list"><li>Bp. Prijono</li><li>Bp. Suwardi</li><li>Bp. Imam Rusdi</li><li>Bp. Suyadi</li><li>Bp. Sarwono</li><li>Bp. Sulimin</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 13</div><div class="kel-ketua">Kel. Bp. H. Mulyono</div><div class="kel-adr">Gg. Manggis 2</div><ul class="kel-list"><li>Bp. Agus Sarwanto</li><li>Bp. Sri Wahono</li><li>Bp. Samtana</li><li>Bp. Makno Wibowo</li><li>Ibu Widyastuti Binti Kimin</li><li>Bp. Maryadi</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 14</div><div class="kel-ketua">Kel. Ibu Nanik</div><div class="kel-adr">Macanan — Solo</div><ul class="kel-list"><li>(Alm. Widodo Muchtar)</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 15</div><div class="kel-ketua">Kel. Bp. Kasiman</div><div class="kel-adr">Gg. PCI F23</div><ul class="kel-list"><li>Ibu Hardiyatni</li><li>Sdr. M. Yazid Irfan</li><li>Bp. Pitoyo Amrih</li><li>Ibu Moro Retiningtyas</li><li>Alm. Achmad Sutiyo R.</li><li>Almh. Ibu Sarinten Binti H. Umar</li></ul></div>
+
+      <div class="kel-card"><div class="kel-badge">SAPI 16</div><div class="kel-ketua">Kel. Bp. Tri Nurdin</div><div class="kel-adr">Gg. Anggur</div><ul class="kel-list"><li>Bp. Budi Purwanto</li><li>Bp. Agung PW.</li><li>Bp. Hasan Ahmadi</li><li>Bp. Harsono — Ngruki</li><li>Bp. Sukron</li><li>Bp. H. Muslim</li></ul></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="sec sec-emas" id="galeri">
+  <div class="wrap">
+    <div class="eyebrow anim">Dokumentasi</div>
+    <h2 class="sec-ttl anim">Galeri Kegiatan Qurban</h2>
+    <p class="sec-desc anim">Dokumentasi lengkap pelaksanaan kegiatan qurban di lapangan.</p>
+    
+    <div class="galeri-card anim">
+      <div style="font-size:48px;margin-bottom:16px;">📸</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--hijau-dk);margin-bottom:12px;">Foto & Video Kegiatan</h3>
+      <p style="font-size:13.5px;color:var(--abu);margin-bottom:24px;line-height:1.7;">
+        Lihat kemeriahan dan transparansi pelaksanaan penyembelihan, penimbangan, pengemasan, hingga pembagian daging qurban Masjid Al Muhtadin.
+      </p>
+      <a href="https://drive.google.com/drive/folders/10cf5rqjgyflP1aiU91grOCOSCpRKDo7V?usp=sharing" target="_blank" rel="noopener noreferrer" class="galeri-btn">
+        📂 Buka Galeri Google Drive
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section class="penutup" id="penutup">
+  <div class="penutup-inner">
+    <div class="p-ayat">لَن يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا</div>
+    <div class="p-ayat">وَلَٰكِن يَنَالُهُ التَّقْوَىٰ مِنكُمْ</div>
+    <div class="p-ref">Q.S. Al-Hajj: 37</div>
+    <div class="p-div"></div>
+    <p>"Daging-daging dan darah unta itu sekali-kali tidak dapat mencapai (keridhaan) Allah, tetapi ketakwaan dari kamulah yang dapat mencapainya."</p>
+    <p>Semoga seluruh ibadah qurban 1447H ini diterima Allah SWT, menjadi amal jariyah bagi seluruh shohibul qurban, dan berkah bagi masyarakat. <strong style="color:var(--emas-lt)">Jazakumullahu khairan katsiran.</strong></p>
+    <div class="p-ttd">
+      <div class="jbt">Ketua Panitia Idul Adha 1447H</div>
+      <div class="nm">Muhammad Abdullah</div>
+      <div class="org">Masjid Al Muhtadin — Waringinrejo, Cemani, Grogol, Sukoharjo</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>Masjid Al Muhtadin</strong> — Waringinrejo, Cemani, Grogol, Sukoharjo &nbsp;|&nbsp;
+  Laporan Idul Adha 1447H / 27 Mei 2026 &nbsp;|&nbsp; Panitia
+</footer>
+
+<button class="fab" onclick="window.print()">🖨️ Cetak PDF</button>
+
+<script>
+// Scroll animation
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('show') }), {threshold:.1});
+document.querySelectorAll('.anim').forEach(el => obs.observe(el));
+
+// Counter
+function count(el, to, dur=1600){
+  let s=null;
+  const step=ts=>{
+    if(!s)s=ts;
+    const p=Math.min((ts-s)/dur,1), e=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(e*to).toLocaleString('id-ID');
+    if(p<1)requestAnimationFrame(step); else el.textContent=to.toLocaleString('id-ID');
+  };
+  requestAnimationFrame(step);
+}
+const co = new IntersectionObserver(e=>e.forEach(x=>{
+  if(x.isIntersecting){count(x.target,+x.target.dataset.to);co.unobserve(x.target);}
+}),{threshold:.5});
+document.querySelectorAll('[data-to]').forEach(el=>co.observe(el));
+
+// Chart bar animation
+const chartObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bars = entry.target.querySelectorAll('.bar-fl');
+      bars.forEach(bar => {
+        const pct = bar.getAttribute('data-percent');
+        if (pct) bar.style.width = pct;
+      });
+      chartObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.chart-box').forEach(box => chartObserver.observe(box));
+
+// Scrollspy for active nav
+const spySections = document.querySelectorAll('section, .penutup');
+const navLinks = document.querySelectorAll('.nav a');
+const spyObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      if (id) {
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+            // Auto scroll navbar horizontally to keep active link centered
+            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    }
+  });
+}, { rootMargin: '-20% 0px -60% 0px' });
+document.querySelectorAll('section, .penutup').forEach(sec => spyObserver.observe(sec));
+
+// Shohibul Search
+const searchInput = document.getElementById('shohibul-search');
+const searchClear = document.getElementById('search-clear');
+const searchCount = document.getElementById('search-count');
+const kelCards = document.querySelectorAll('.kel-card');
+
+if (searchInput) {
+  searchInput.addEventListener('input', function(e) {
+    const q = e.target.value.toLowerCase().trim();
+    
+    if (q.length > 0) {
+      searchClear.style.display = 'flex';
+    } else {
+      searchClear.style.display = 'none';
+    }
+    
+    let matchCount = 0;
+    
+    kelCards.forEach(card => {
+      const badge = card.querySelector('.kel-badge').textContent.toLowerCase();
+      const ketua = card.querySelector('.kel-ketua').textContent.toLowerCase();
+      const adr = card.querySelector('.kel-adr').textContent.toLowerCase();
+      const members = Array.from(card.querySelectorAll('.kel-list li')).map(li => li.textContent.toLowerCase());
+      
+      const isMatch = badge.includes(q) || 
+                      ketua.includes(q) || 
+                      adr.includes(q) || 
+                      members.some(member => member.includes(q));
+                      
+      if (isMatch) {
+        card.style.display = '';
+        matchCount++;
+        
+        // Highlight matching members
+        card.querySelectorAll('.kel-list li').forEach(li => {
+          const text = li.textContent.toLowerCase();
+          if (q.length > 0 && text.includes(q)) {
+            li.style.fontWeight = '700';
+            li.style.color = 'var(--hijau)';
+          } else {
+            li.style.fontWeight = '';
+            li.style.color = '';
+          }
+        });
+        
+        // Highlight ketua
+        const ketuaEl = card.querySelector('.kel-ketua');
+        if (q.length > 0 && ketuaEl.textContent.toLowerCase().includes(q)) {
+          ketuaEl.style.color = 'var(--emas)';
+        } else {
+          ketuaEl.style.color = '';
+        }
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    
+    if (q.length > 0) {
+      searchCount.textContent = `Menampilkan ${matchCount} dari 16 kelompok`;
+      searchCount.style.display = 'block';
+    } else {
+      searchCount.style.display = 'none';
+      // Reset
+      kelCards.forEach(card => {
+        card.style.display = '';
+        card.querySelector('.kel-ketua').style.color = '';
+        card.querySelectorAll('.kel-list li').forEach(li => {
+          li.style.fontWeight = '';
+          li.style.color = '';
+        });
+      });
+    }
+  });
+  
+  searchClear.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.focus();
+  });
+}
+</script>
+</body>
+</html>
